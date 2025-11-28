@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Dry Fruits - Nature's Basket</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .natural-gradient {
+            background: linear-gradient(135deg, #FEF7EC 0%, #F8F4E9 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(139, 69, 19, 0.1), 0 10px 10px -5px rgba(139, 69, 19, 0.04);
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-in-out;
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .line-clamp-1 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+        }
+        
+        .line-clamp-2 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+        
+        .natural-badge {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+        }
+    </style>
+</head>
+<body class="bg-amber-50 font-sans text-amber-900">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-amber-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-amber-500 mr-2"></div>
+                        <div class="text-2xl font-bold text-amber-800 tracking-tight">Nature's Basket</div>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors duration-200">Home</a>
+                    <a href="dry-fruits.html" class="font-medium text-amber-600 border-b-2 border-amber-600 transition-colors duration-200">Dry Fruits</a>
+                    <a href="honey.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors duration-200">Honey</a>
+                    <a href="blog.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors duration-200">Blog</a>
+                    <a href="about.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors duration-200">About</a>
+                </nav>
+                
+                <!-- Header Actions -->
+                <div class="flex items-center space-x-4">
+                    <!-- Cart Button -->
+                    <button class="bg-amber-600 text-white px-5 py-2.5 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        Cart (0)
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="md:hidden text-amber-900 p-2 rounded-lg hover:bg-amber-100 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden py-4 border-t border-amber-200 animate-slide-up">
+                <div class="flex flex-col space-y-4">
+                    <a href="../index.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors py-2">Home</a>
+                    <a href="dry-fruits.html" class="font-medium text-amber-600 py-2">Dry Fruits</a>
+                    <a href="honey.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors py-2">Honey</a>
+                    <a href="blog.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors py-2">Blog</a>
+                    <a href="about.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors py-2">About</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="natural-gradient py-16 md:py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto text-center animate-fade-in">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-amber-900 mb-6 leading-tight">
+                        Premium <span class="text-amber-600">Dry Fruits</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-amber-700 mb-8 max-w-2xl mx-auto leading-relaxed">
+                        Nature's nutritional powerhouses, carefully selected and naturally dried to preserve their goodness and flavor.
+                    </p>
+                    
+                    <!-- Category Filters -->
+                    <div class="flex flex-wrap justify-center gap-3 mb-8">
+                        <button class="bg-amber-600 text-white px-5 py-2.5 rounded-xl font-medium transition-all duration-200 shadow-sm">
+                            All Dry Fruits
+                        </button>
+                        <button class="bg-white text-amber-700 px-5 py-2.5 rounded-xl font-medium hover:bg-amber-600 hover:text-white transition-all duration-200 shadow-sm border border-amber-200">
+                            Almonds
+                        </button>
+                        <button class="bg-white text-amber-700 px-5 py-2.5 rounded-xl font-medium hover:bg-amber-600 hover:text-white transition-all duration-200 shadow-sm border border-amber-200">
+                            Walnuts
+                        </button>
+                        <button class="bg-white text-amber-700 px-5 py-2.5 rounded-xl font-medium hover:bg-amber-600 hover:text-white transition-all duration-200 shadow-sm border border-amber-200">
+                            Cashews
+                        </button>
+                        <button class="bg-white text-amber-700 px-5 py-2.5 rounded-xl font-medium hover:bg-amber-600 hover:text-white transition-all duration-200 shadow-sm border border-amber-200">
+                            Dates
+                        </button>
+                        <button class="bg-white text-amber-700 px-5 py-2.5 rounded-xl font-medium hover:bg-amber-600 hover:text-white transition-all duration-200 shadow-sm border border-amber-200">
+                            Raisins
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Dry Fruits Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+                    <!-- California Almonds -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover animate-fade-in border border-amber-200">
+                        <div class="relative overflow-hidden">
+                            <div class="h-64 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="w-24 h-24 rounded-full bg-amber-300 mx-auto mb-3 flex items-center justify-center">
+                                        <span class="text-amber-800 font-bold text-lg">AL</span>
+                                    </div>
+                                    <span class="text-amber-700 font-medium">California Almonds</span>
+                                </div>
+                            </div>
+                            <span class="absolute top-4 right-4 natural-badge text-white text-xs font-bold px-3 py-1 rounded-full">BESTSELLER</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-lg text-amber-900 line-clamp-1 mb-2">Premium California Almonds</h3>
+                            <div class="flex items-center mb-3">
+                                <span class="text-2xl font-bold text-amber-600">$12.99</span>
+                                <span class="text-sm text-amber-500 ml-2">/ 500g</span>
+                            </div>
+                            <p class="text-amber-700 text-sm mb-4 line-clamp-2">Rich in protein and vitamin E, these almonds are naturally sourced and carefully selected.</p>
+                            <div class="flex space-x-3">
+                                <button class="flex-1 bg-amber-600 text-white py-3 rounded-xl font-semibold hover:bg-amber-700 transition-colors duration-200">
+                                    Add to Cart
+                                </button>
+                                <button class="w-12 h-12 flex items-center justify-center border border-amber-300 rounded-xl hover:bg-amber-50 transition-colors duration-200">
+                                    <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- English Walnuts -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover animate-fade-in border border-amber-200">
+                        <div class="relative overflow-hidden">
+                            <div class="h-64 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="w-24 h-24 rounded-full bg-amber-400 mx-auto mb-3 flex items-center justify-center">
+                                        <span class="text-amber-800 font-bold text-lg">WL</span>
+                                    </div>
+                                    <span class="text-amber-700 font-medium">English Walnuts</span>
+                                </div>
+                            </div>
+                            <span class="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">NEW</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-lg text-amber-900 line-clamp-1 mb-2">Fresh English Walnuts</h3>
+                            <div class="flex items-center mb-3">
+                                <span class="text-2xl font-bold text-amber-600">$10.99</span>
+                                <span class="text-sm text-amber-500 ml-2">/ 500g</span>
+                            </div>
+                            <p class="text-amber-700 text-sm mb-4 line-clamp-2">Packed with omega-3 fatty acids and antioxidants for brain health.</p>
+                            <div class="flex space-x-3">
+                                <button class="flex-1 bg-amber-600 text-white py-3 rounded-xl font-semibold hover:bg-amber-700 transition-colors duration-200">
+                                    Add to Cart
+                                </button>
+                                <button class="w-12 h-12 flex items-center justify-center border border-amber-300 rounded-xl hover:bg-amber-50 transition-colors duration-200">
+                                    <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Medjool Dates -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover animate-fade-in border border-amber-200">
+                        <div class="relative overflow-hidden">
+                            <div class="h-64 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="w-24 h-24 rounded-full bg-amber-500 mx-auto mb-3 flex items-center justify-center">
+                                        <span class="text-amber-100 font-bold text-lg">DT</span>
+                                    </div>
+                                    <span class="text-amber-700 font-medium">Medjool Dates</span>
+                                </div>
+                            </div>
+                            <span class="absolute top-4 right-4 natural-badge text-white text-xs font-bold px-3 py-1 rounded-full">POPULAR</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-lg text-amber-900 line-clamp-1 mb-2">Premium Medjool Dates</h3>
+                            <div class="flex items-center mb-3">
+                                <span class="text-2xl font-bold text-amber-600">$15.99</span>
+                                <span class="text-sm text-amber-500 ml-2">/ 1kg</span>
+                            </div>
+                            <p class="text-amber-700 text-sm mb-4 line-clamp-2">Naturally sweet and rich in fiber, perfect for energy and digestion.</p>
+                            <div class="flex space-x-3">
+                                <button class="flex-1 bg-amber-600 text-white py-3 rounded-xl font-semibold hover:bg-amber-700 transition-colors duration-200">
+                                    Add to Cart
+                                </button>
+                                <button class="w-12 h-12 flex items-center justify-center border border-amber-300 rounded-xl hover:bg-amber-50 transition-colors duration-200">
+                                    <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Whole Cashews -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover animate-fade-in border border-amber-200">
+                        <div class="relative overflow-hidden">
+                            <div class="h-64 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="w-24 h-24 rounded-full bg-amber-300 mx-auto mb-3 flex items-center justify-center">
+                                        <span class="text-amber-800 font-bold text-lg">CH</span>
+                                    </div>
+                                    <span class="text-amber-700 font-medium">Whole Cashews</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-lg text-amber-900 line-clamp-1 mb-2">Whole Raw Cashews</h3>
+                            <div class="flex items-center mb-3">
+                                <span class="text-2xl font-bold text-amber-600">$14.50</span>
+                                <span class="text-sm text-amber-500 ml-2">/ 500g</span>
+                            </div>
+                            <p class="text-amber-700 text-sm mb-4 line-clamp-2">Creamy and delicious, packed with healthy fats and minerals.</p>
+                            <div class="flex space-x-3">
+                                <button class="flex-1 bg-amber-600 text-white py-3 rounded-xl font-semibold hover:bg-amber-700 transition-colors duration-200">
+                                    Add to Cart
+                                </button>
+                                <button class="w-12 h-12 flex items-center justify-center border border-amber-300 rounded-xl hover:bg-amber-50 transition-colors duration-200">
+                                    <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Golden Raisins -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover animate-fade-in border border-amber-200">
+                        <div class="relative overflow-hidden">
+                            <div class="h-64 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="w-24 h-24 rounded-full bg-yellow-300 mx-auto mb-3 flex items-center justify-center">
+                                        <span class="text-amber-800 font-bold text-lg">GR</span>
+                                    </div>
+                                    <span class="text-amber-700 font-medium">Golden Raisins</span>
+                                </div>
+                            </div>
+                            <span class="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">NEW</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-lg text-amber-900 line-clamp-1 mb-2">Sweet Golden Raisins</h3>
+                            <div class="flex items-center mb-3">
+                                <span class="text-2xl font-bold text-amber-600">$8.99</span>
+                                <span class="text-sm text-amber-500 ml-2">/ 500g</span>
+                            </div>
+                            <p class="text-amber-700 text-sm mb-4 line-clamp-2">Naturally sweet raisins perfect for baking, cooking, or snacking.</p>
+                            <div class="flex space-x-3">
+                                <button class="flex-1 bg-amber-600 text-white py-3 rounded-xl font-semibold hover:bg-amber-700 transition-colors duration-200">
+                                    Add to Cart
+                                </button>
+                                <button class="w-12 h-12 flex items-center justify-center border border-amber-300 rounded-xl hover:bg-amber-50 transition-colors duration-200">
+                                    <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pistachios -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover animate-fade-in border border-amber-200">
+                        <div class="relative overflow-hidden">
+                            <div class="h-64 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="w-24 h-24 rounded-full bg-green-300 mx-auto mb-3 flex items-center justify-center">
+                                        <span class="text-amber-800 font-bold text-lg">PS</span>
+                                    </div>
+                                    <span class="text-amber-700 font-medium">Pistachios</span>
+                                </div>
+                            </div>
+                            <span class="absolute top-4 right-4 natural-badge text-white text-xs font-bold px-3 py-1 rounded-full">POPULAR</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-lg text-amber-900 line-clamp-1 mb-2">Premium Shelled Pistachios</h3>
+                            <div class="flex items-center mb-3">
+                                <span class="text-2xl font-bold text-amber-600">$16.99</span>
+                                <span class="text-sm text-amber-500 ml-2">/ 500g</span>
+                            </div>
+                            <p class="text-amber-700 text-sm mb-4 line-clamp-2">Rich, buttery flavor with essential nutrients and healthy fats.</p>
+                            <div class="flex space-x-3">
+                                <button class="flex-1 bg-amber-600 text-white py-3 rounded-xl font-semibold hover:bg-amber-700 transition-colors duration-200">
+                                    Add to Cart
+                                </button>
+                                <button class="w-12 h-12 flex items-center justify-center border border-amber-300 rounded-xl hover:bg-amber-50 transition-colors duration-200">
+                                    <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dried Apricots -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover animate-fade-in border border-amber-200">
+                        <div class="relative overflow-hidden">
+                            <div class="h-64 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="w-24 h-24 rounded-full bg-orange-300 mx-auto mb-3 flex items-center justify-center">
+                                        <span class="text-amber-800 font-bold text-lg">AP</span>
+                                    </div>
+                                    <span class="text-amber-700 font-medium">Dried Apricots</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-lg text-amber-900 line-clamp-1 mb-2">Natural Dried Apricots</h3>
+                            <div class="flex items-center mb-3">
+                                <span class="text-2xl font-bold text-amber-600">$11.50</span>
+                                <span class="text-sm text-amber-500 ml-2">/ 500g</span>
+                            </div>
+                            <p class="text-amber-700 text-sm mb-4 line-clamp-2">Sweet and tangy apricots packed with vitamins and fiber.</p>
+                            <div class="flex space-x-3">
+                                <button class="flex-1 bg-amber-600 text-white py-3 rounded-xl font-semibold hover:bg-amber-700 transition-colors duration-200">
+                                    Add to Cart
+                                </button>
+                                <button class="w-12 h-12 flex items-center justify-center border border-amber-300 rounded-xl hover:bg-amber-50 transition-colors duration-200">
+                                    <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mixed Nuts -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover animate-fade-in border border-amber-200">
+                        <div class="relative overflow-hidden">
+                            <div class="h-64 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="w-24 h-24 rounded-full bg-amber-400 mx-auto mb-3 flex items-center justify-center">
+                                        <span class="text-amber-800 font-bold text-lg">MN</span>
+                                    </div>
+                                    <span class="text-amber-700 font-medium">Mixed Nuts</span>
+                                </div>
+                            </div>
+                            <span class="absolute top-4 right-4 natural-badge text-white text-xs font-bold px-3 py-1 rounded-full">BEST VALUE</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-lg text-amber-900 line-clamp-1 mb-2">Premium Mixed Nuts</h3>
+                            <div class="flex items-center mb-3">
+                                <span class="text-2xl font-bold text-amber-600">$18.99</span>
+                                <span class="text-sm text-amber-500 ml-2">/ 1kg</span>
+                            </div>
+                            <p class="text-amber-700 text-sm mb-4 line-clamp-2">Perfect blend of almonds, walnuts, cashews, and pistachios.</p>
+                            <div class="flex space-x-3">
+                                <button class="flex-1 bg-amber-600 text-white py-3 rounded-xl font-semibold hover:bg-amber-700 transition-colors duration-200">
+                                    Add to Cart
+                                </button>
+                                <button class="w-12 h-12 flex items-center justify-center border border-amber-300 rounded-xl hover:bg-amber-50 transition-colors duration-200">
+                                    <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Load More Button -->
+                <div class="text-center mt-12">
+                    <button class="bg-white text-amber-600 border-2 border-amber-600 px-8 py-3 rounded-xl font-semibold hover:bg-amber-600 hover:text-white transition-all duration-300">
+                        Load More Products
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Health Benefits Section -->
+        <section class="py-16 bg-amber-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">
+                        Health Benefits of Dry Fruits
+                    </h2>
+                    <p class="text-lg text-amber-700 max-w-2xl mx-auto">
+                        Discover why dry fruits are considered nature's superfoods
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 bg-amber-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Heart Health</h3>
+                        <p class="text-amber-700">Rich in healthy fats and antioxidants that support cardiovascular health.</p>
+                    </div>
+                    
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 bg-amber-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Energy Boost</h3>
+                        <p class="text-amber-700">Natural source of sustained energy with essential vitamins and minerals.</p>
+                    </div>
+                    
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 bg-amber-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Immune Support</h3>
+                        <p class="text-amber-700">Packed with antioxidants and nutrients that strengthen your immune system.</p>
+                    </div>
+                    
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 bg-amber-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Brain Function</h3>
+                        <p class="text-amber-700">Essential fatty acids and nutrients that support cognitive health and memory.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-amber-100 pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+                <!-- Brand Column -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <div class="w-8 h-8 rounded-full bg-amber-500 mr-2"></div>
+                        <div class="text-2xl font-bold text-amber-50">Nature's Basket</div>
+                    </div>
+                    <p class="text-amber-300 mb-6 leading-relaxed">
+                        Bringing you nature's finest dry fruits and pure honey, sourced sustainably and delivered with care.
+                    </p>
+                    <div class="flex space-x-4">
+                        <!-- Social Media Icons -->
+                        <a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Shop Column -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-amber-50">Shop</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Home</a></li>
+                        <li><a href="dry-fruits.html" class="text-amber-50">Dry Fruits</a></li>
+                        <li><a href="honey.html" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Honey</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">New Arrivals</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Seasonal Specials</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support Column -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-amber-50">Support</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Contact Us</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Shipping Info</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Returns & Exchanges</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">FAQ</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Storage Tips</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Column -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-amber-50">About Us</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Our Story</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Sustainability</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Privacy Policy</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Terms of Service</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Contact Information</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t border-amber-800 text-center">
+                <p class="text-amber-400">
+                    &copy; 2024 Nature's Basket. All rights reserved. | Naturally Good, Naturally Yours
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

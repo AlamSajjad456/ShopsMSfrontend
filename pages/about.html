@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Nature's Basket</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .natural-gradient {
+            background: linear-gradient(135deg, #FEF7EC 0%, #F8F4E9 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 20px -5px rgba(139, 69, 19, 0.1), 0 8px 8px -5px rgba(139, 69, 19, 0.04);
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-in-out;
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .line-clamp-2 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+        
+        .line-clamp-3 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }
+        
+        .blog-category-badge {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+        }
+    </style>
+</head>
+<body class="bg-amber-50 font-sans text-amber-900">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-amber-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-amber-500 mr-2"></div>
+                        <div class="text-2xl font-bold text-amber-800 tracking-tight">Nature's Basket</div>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors duration-200">Home</a>
+                    <a href="dry-fruits.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors duration-200">Dry Fruits</a>
+                    <a href="honey.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors duration-200">Honey</a>
+                    <a href="blog.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors duration-200">Blog</a>
+                    <a href="about.html" class="font-medium text-amber-600 border-b-2 border-amber-600 transition-colors duration-200">About</a>
+                </nav>
+                
+                <!-- Header Actions -->
+                <div class="flex items-center space-x-4">
+                    <!-- Cart Button -->
+                    <button class="bg-amber-600 text-white px-5 py-2.5 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        Cart (0)
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="md:hidden text-amber-900 p-2 rounded-lg hover:bg-amber-100 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden py-4 border-t border-amber-200 animate-slide-up">
+                <div class="flex flex-col space-y-4">
+                    <a href="../index.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors py-2">Home</a>
+                    <a href="dry-fruits.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors py-2">Dry Fruits</a>
+                    <a href="honey.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors py-2">Honey</a>
+                    <a href="blog.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors py-2">Blog</a>
+                    <a href="about.html" class="font-medium text-amber-600 py-2">About</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Hero Section -->
+        <section class="natural-gradient py-16 md:py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto text-center animate-fade-in">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-amber-900 mb-6 leading-tight">
+                        Our <span class="text-amber-600">Story</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-amber-700 mb-8 max-w-2xl mx-auto leading-relaxed">
+                        From humble beginnings to becoming your trusted source for nature's finest products.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Content Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Our Story Section -->
+                <div class="flex flex-col lg:flex-row gap-12 items-center mb-20 animate-fade-in">
+                    <div class="lg:w-1/2">
+                        <div class="bg-gradient-to-br from-amber-100 to-amber-200 rounded-2xl h-80 flex items-center justify-center">
+                            <span class="text-amber-700 font-medium">Our Story Image</span>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <span class="inline-block blog-category-badge text-white text-xs font-bold px-3 py-1 rounded-full mb-4">
+                            Our Journey
+                        </span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-6">
+                            From Family Roots to Global Reach
+                        </h2>
+                        <p class="text-amber-700 mb-4 leading-relaxed">
+                            Nature's Basket began as a small family business in 1995, founded by the Johnson family with a simple mission: to bring the highest quality natural products directly from farms to families.
+                        </p>
+                        <p class="text-amber-700 mb-4 leading-relaxed">
+                            What started as a single store selling locally sourced dry fruits and honey has grown into a trusted brand known for purity, quality, and commitment to sustainable practices.
+                        </p>
+                        <p class="text-amber-700 leading-relaxed">
+                            Today, we partner with over 200 farms across 15 countries, ensuring that every product in our basket meets our rigorous standards for quality and ethical sourcing.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Mission & Values -->
+                <div class="bg-white rounded-2xl shadow-sm p-8 border border-amber-200 mb-16 animate-slide-up">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-6">Our Mission & Values</h2>
+                        <p class="text-lg text-amber-700 mb-8">
+                            We believe that nature provides the best nourishment. Our mission is to make these natural treasures accessible to everyone while respecting the environment and supporting the communities we work with.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mx-auto mb-4">
+                                    <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-amber-900 mb-2">Quality</h3>
+                                <p class="text-amber-700">We never compromise on quality, ensuring every product meets our high standards.</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mx-auto mb-4">
+                                    <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9m0 9c-5 0-9-4-9-9s4-9 9-9"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-amber-900 mb-2">Sustainability</h3>
+                                <p class="text-amber-700">We prioritize eco-friendly practices and support sustainable farming methods.</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mx-auto mb-4">
+                                    <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-amber-900 mb-2">Community</h3>
+                                <p class="text-amber-700">We build lasting relationships with farmers and support local communities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Section -->
+                <div class="mb-16 animate-fade-in">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Meet Our Team</h2>
+                        <p class="text-lg text-amber-700 max-w-2xl mx-auto">
+                            The passionate individuals behind Nature's Basket who work tirelessly to bring you the best nature has to offer.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Team Member 1 -->
+                        <div class="bg-white rounded-2xl shadow-sm overflow-hidden card-hover border border-amber-200">
+                            <div class="h-64 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                                <span class="text-amber-700 font-medium">Team Member Image</span>
+                            </div>
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-bold text-amber-900 mb-1">Sarah Johnson</h3>
+                                <p class="text-amber-600 mb-4">Founder & CEO</p>
+                                <p class="text-amber-700 text-sm">
+                                    With over 25 years in the natural foods industry, Sarah's vision continues to guide our company's direction.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Team Member 2 -->
+                        <div class="bg-white rounded-2xl shadow-sm overflow-hidden card-hover border border-amber-200">
+                            <div class="h-64 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                                <span class="text-amber-700 font-medium">Team Member Image</span>
+                            </div>
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-bold text-amber-900 mb-1">Michael Chen</h3>
+                                <p class="text-amber-600 mb-4">Head of Sourcing</p>
+                                <p class="text-amber-700 text-sm">
+                                    Michael travels globally to establish relationships with farmers and ensure our quality standards are met.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Team Member 3 -->
+                        <div class="bg-white rounded-2xl shadow-sm overflow-hidden card-hover border border-amber-200">
+                            <div class="h-64 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                                <span class="text-amber-700 font-medium">Team Member Image</span>
+                            </div>
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-bold text-amber-900 mb-1">Emma Rodriguez</h3>
+                                <p class="text-amber-600 mb-4">Nutrition Expert</p>
+                                <p class="text-amber-700 text-sm">
+                                    Emma's expertise in nutrition helps us educate our customers about the health benefits of our products.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Team Member 4 -->
+                        <div class="bg-white rounded-2xl shadow-sm overflow-hidden card-hover border border-amber-200">
+                            <div class="h-64 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                                <span class="text-amber-700 font-medium">Team Member Image</span>
+                            </div>
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-bold text-amber-900 mb-1">David Wilson</h3>
+                                <p class="text-amber-600 mb-4">Sustainability Director</p>
+                                <p class="text-amber-700 text-sm">
+                                    David ensures our operations are environmentally responsible and that we give back to our partner communities.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why Choose Us -->
+                <div class="bg-amber-50 rounded-2xl p-8 border border-amber-200 animate-slide-up">
+                    <div class="max-w-4xl mx-auto">
+                        <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-6 text-center">Why Choose Nature's Basket</h2>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+                                        <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-amber-900 mb-2">Rigorous Quality Standards</h3>
+                                    <p class="text-amber-700">Every product undergoes multiple quality checks to ensure purity, freshness, and nutritional value.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+                                        <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-amber-900 mb-2">Direct from Source</h3>
+                                    <p class="text-amber-700">We work directly with farmers, eliminating middlemen to ensure fair prices and premium quality.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+                                        <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9m0 9c-5 0-9-4-9-9s4-9 9-9"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-amber-900 mb-2">Eco-Friendly Packaging</h3>
+                                    <p class="text-amber-700">Our commitment to sustainability extends to our packaging, using recyclable and biodegradable materials.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+                                        <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-amber-900 mb-2">Fast & Reliable Delivery</h3>
+                                    <p class="text-amber-700">We ensure your orders reach you quickly and in perfect condition, no matter where you are.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 natural-gradient">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto text-center animate-fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-6">
+                        Join Our Natural Journey
+                    </h2>
+                    <p class="text-lg text-amber-700 mb-8 max-w-2xl mx-auto">
+                        Experience the difference that comes from products sourced with care, integrity, and respect for nature.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="dry-fruits.html" class="bg-amber-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105">
+                            Shop Dry Fruits
+                        </a>
+                        <a href="honey.html" class="bg-white text-amber-600 border-2 border-amber-600 px-8 py-4 rounded-2xl font-semibold hover:bg-amber-50 transition-all duration-300">
+                            Explore Our Honey
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-amber-100 pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+                <!-- Brand Column -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <div class="w-8 h-8 rounded-full bg-amber-500 mr-2"></div>
+                        <div class="text-2xl font-bold text-amber-50">Nature's Basket</div>
+                    </div>
+                    <p class="text-amber-300 mb-6 leading-relaxed">
+                        Bringing you nature's finest dry fruits and pure honey, sourced sustainably and delivered with care.
+                    </p>
+                    <div class="flex space-x-4">
+                        <!-- Social Media Icons -->
+                        <a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Shop Column -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-amber-50">Shop</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Home</a></li>
+                        <li><a href="dry-fruits.html" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Dry Fruits</a></li>
+                        <li><a href="honey.html" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Honey</a></li>
+                        <li><a href="blog.html" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Blog</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Seasonal Specials</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support Column -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-amber-50">Support</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Contact Us</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Shipping Info</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Returns & Exchanges</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">FAQ</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Storage Tips</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Column -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-amber-50">About Us</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-amber-50">Our Story</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Sustainability</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Privacy Policy</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Terms of Service</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Contact Information</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t border-amber-800 text-center">
+                <p class="text-amber-400">
+                    &copy; 2024 Nature's Basket. All rights reserved. | Naturally Good, Naturally Yours
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
