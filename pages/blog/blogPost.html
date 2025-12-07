@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Amazing Health Benefits of Daily Almond Consumption - Nature's Basket</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .natural-gradient {
+            background: linear-gradient(135deg, #FEF7EC 0%, #F8F4E9 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 20px -5px rgba(139, 69, 19, 0.1), 0 8px 8px -5px rgba(139, 69, 19, 0.04);
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-in-out;
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .line-clamp-2 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+        
+        .line-clamp-3 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }
+        
+        .blog-category-badge {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+        }
+        
+        .content-wrapper {
+            max-width: 800px;
+        }
+        
+        .blog-content h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #78350f;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #92400e;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #5a3807;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+            color: #5a3807;
+        }
+        
+        .blog-content blockquote {
+            border-left: 4px solid #f59e0b;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #78350f;
+            font-size: 1.125rem;
+        }
+        
+        .share-btn:hover {
+            transform: translateY(-2px);
+            transition: transform 0.2s ease;
+        }
+    </style>
+</head>
+<body class="bg-amber-50 font-sans text-amber-900">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-amber-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-amber-500 mr-2"></div>
+                        <div class="text-2xl font-bold text-amber-800 tracking-tight">Nature's Basket</div>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors duration-200">Home</a>
+                    <a href="dry-fruits.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors duration-200">Dry Fruits</a>
+                    <a href="honey.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors duration-200">Honey</a>
+                    <a href="blog.html" class="font-medium text-amber-600 border-b-2 border-amber-600 transition-colors duration-200">Blog</a>
+                    <a href="about.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors duration-200">About</a>
+                </nav>
+                
+                <!-- Header Actions -->
+                <div class="flex items-center space-x-4">
+                    <!-- Cart Button -->
+                    <button class="bg-amber-600 text-white px-5 py-2.5 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        Cart (0)
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="md:hidden text-amber-900 p-2 rounded-lg hover:bg-amber-100 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden py-4 border-t border-amber-200 animate-slide-up">
+                <div class="flex flex-col space-y-4">
+                    <a href="../index.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors py-2">Home</a>
+                    <a href="dry-fruits.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors py-2">Dry Fruits</a>
+                    <a href="honey.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors py-2">Honey</a>
+                    <a href="blog.html" class="font-medium text-amber-600 py-2">Blog</a>
+                    <a href="about.html" class="font-medium text-amber-700 hover:text-amber-600 transition-colors py-2">About</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Blog Post Hero -->
+        <section class="natural-gradient py-12 md:py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="content-wrapper mx-auto">
+                    <!-- Back Button -->
+                    <a href="../blog.html" class="inline-flex items-center text-amber-600 font-medium mb-6 hover:text-amber-700 transition-colors">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                        Back to Blog
+                    </a>
+                    
+                    <!-- Category -->
+                    <div class="mb-4">
+                        <span class="inline-block blog-category-badge text-white text-xs font-bold px-3 py-1 rounded-full">
+                            Nutrition
+                        </span>
+                    </div>
+                    
+                    <!-- Title -->
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-amber-900 mb-6 leading-tight">
+                        The Amazing Health Benefits of Daily Almond Consumption
+                    </h1>
+                    
+                    <!-- Meta Information -->
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8">
+                        <div class="flex items-center mb-4 sm:mb-0">
+                            <div class="w-12 h-12 rounded-full bg-amber-200 flex items-center justify-center mr-4">
+                                <span class="text-amber-700 font-bold text-lg">JD</span>
+                            </div>
+                            <div>
+                                <p class="text-lg font-medium text-amber-900">Dr. Jane Doe</p>
+                                <p class="text-sm text-amber-600">Certified Nutritionist & Wellness Expert</p>
+                            </div>
+                        </div>
+                        <div class="text-amber-700">
+                            <p class="text-sm">Published: <span class="font-medium">May 15, 2024</span></p>
+                            <p class="text-sm">Reading time: <span class="font-medium">8 minutes</span></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Featured Image -->
+                    <div class="rounded-2xl overflow-hidden mb-8 shadow-lg">
+                        <div class="h-64 md:h-96 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-5xl mb-4">🥜</div>
+                                <span class="text-amber-700 font-medium text-lg">Featured Image: Fresh Almonds</span>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 text-center border-t border-amber-200">
+                            <p class="text-sm text-amber-600">A handful of almonds daily can transform your health journey</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Content Section -->
+        <section class="py-12">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <!-- Main Content -->
+                    <div class="lg:w-2/3">
+                        <div class="content-wrapper mx-auto">
+                            <!-- Share Bar -->
+                            <div class="flex items-center justify-between mb-8 p-4 bg-white rounded-xl shadow-sm border border-amber-200">
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-amber-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+                                    </svg>
+                                    <span class="font-medium text-amber-700">Share this article:</span>
+                                </div>
+                                <div class="flex space-x-3">
+                                    <button class="share-btn p-2 bg-amber-100 rounded-lg hover:bg-amber-200 transition-colors">
+                                        <svg class="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="share-btn p-2 bg-amber-100 rounded-lg hover:bg-amber-200 transition-colors">
+                                        <svg class="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="share-btn p-2 bg-amber-100 rounded-lg hover:bg-amber-200 transition-colors">
+                                        <svg class="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Blog Content -->
+                            <article class="blog-content bg-white rounded-2xl shadow-sm p-6 md:p-8 border border-amber-200 mb-8">
+                                <!-- Introduction -->
+                                <div class="mb-8">
+                                    <p class="text-lg font-medium text-amber-700 mb-4">
+                                        In the world of nutrition, few foods have garnered as much attention and praise as the humble almond. This nutrient-dense nut, which has been a dietary staple for centuries across various cultures, is now recognized by modern science as a true superfood.
+                                    </p>
+                                    <p>
+                                        Whether you enjoy them raw, roasted, or as almond butter, incorporating just a handful of almonds into your daily routine can have profound effects on your overall health and well-being.
+                                    </p>
+                                </div>
+                                
+                                <!-- Section 1 -->
+                                <h2>1. Heart Health Champion</h2>
+                                <p>
+                                    Almonds are rich in monounsaturated fats, the same type of healthy fats found in olive oil. These fats help maintain healthy cholesterol levels and support cardiovascular function. Studies have shown that regular almond consumption can:
+                                </p>
+                                <ul class="list-disc pl-6">
+                                    <li>Reduce LDL (bad) cholesterol levels by up to 10%</li>
+                                    <li>Improve artery function and blood flow</li>
+                                    <li>Lower blood pressure in individuals with hypertension</li>
+                                    <li>Reduce inflammation markers in the body</li>
+                                </ul>
+                                
+                                <!-- Image/Info Box -->
+                                <div class="my-8 p-6 bg-amber-50 rounded-xl border border-amber-200">
+                                    <div class="flex items-start">
+                                        <div class="text-3xl mr-4">💚</div>
+                                        <div>
+                                            <h3 class="font-bold text-amber-800 mb-2">Quick Tip</h3>
+                                            <p class="text-amber-700">
+                                                Soak 10-12 almonds overnight and consume them in the morning on an empty stomach for maximum nutrient absorption.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Section 2 -->
+                                <h2>2. Brain Boosting Properties</h2>
+                                <p>
+                                    Almonds contain riboflavin and L-carnitine, nutrients that are known to boost brain activity and may reduce the risk of Alzheimer's disease. The vitamin E in almonds acts as an antioxidant that protects brain cells from oxidative stress.
+                                </p>
+                                <blockquote>
+                                    "Regular almond consumption has been linked to improved memory function and cognitive performance in both young adults and the elderly."
+                                </blockquote>
+                                
+                                <!-- Section 3 -->
+                                <h2>3. Weight Management Support</h2>
+                                <p>
+                                    Contrary to what some might think, almonds can actually aid in weight management. The combination of protein, fiber, and healthy fats helps you feel full and satisfied, reducing overall calorie intake throughout the day.
+                                </p>
+                                
+                                <!-- Nutritional Table -->
+                                <div class="my-8 overflow-hidden rounded-xl border border-amber-200">
+                                    <div class="bg-amber-600 px-6 py-3">
+                                        <h3 class="font-bold text-white text-lg">Nutritional Value (Per 100g of Almonds)</h3>
+                                    </div>
+                                    <div class="bg-white divide-y divide-amber-100">
+                                        <div class="flex justify-between px-6 py-4">
+                                            <span class="font-medium text-amber-800">Calories</span>
+                                            <span class="text-amber-700">579 kcal</span>
+                                        </div>
+                                        <div class="flex justify-between px-6 py-4">
+                                            <span class="font-medium text-amber-800">Protein</span>
+                                            <span class="text-amber-700">21.2g</span>
+                                        </div>
+                                        <div class="flex justify-between px-6 py-4">
+                                            <span class="font-medium text-amber-800">Healthy Fats</span>
+                                            <span class="text-amber-700">49.9g</span>
+                                        </div>
+                                        <div class="flex justify-between px-6 py-4">
+                                            <span class="font-medium text-amber-800">Fiber</span>
+                                            <span class="text-amber-700">12.5g</span>
+                                        </div>
+                                        <div class="flex justify-between px-6 py-4">
+                                            <span class="font-medium text-amber-800">Vitamin E</span>
+                                            <span class="text-amber-700">25.6mg (171% DV)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Section 4 -->
+                                <h2>4. Skin and Hair Benefits</h2>
+                                <p>
+                                    The high vitamin E content in almonds makes them excellent for skin health. Vitamin E is a powerful antioxidant that helps protect skin from UV damage and premature aging. Almond oil is also commonly used in skincare products for its moisturizing properties.
+                                </p>
+                                
+                                <!-- Section 5 -->
+                                <h2>5. Blood Sugar Regulation</h2>
+                                <p>
+                                    Almonds have a low glycemic index and are rich in magnesium, which plays a crucial role in regulating blood sugar levels. This makes them an excellent snack option for people with diabetes or those looking to maintain stable energy levels throughout the day.
+                                </p>
+                                
+                                <!-- How to Incorporate -->
+                                <h2>How to Incorporate Almonds Into Your Daily Diet</h2>
+                                <ol class="list-decimal pl-6">
+                                    <li class="mb-3"><strong>Morning Routine:</strong> Add a tablespoon of almond butter to your morning smoothie or oatmeal.</li>
+                                    <li class="mb-3"><strong>Snack Smart:</strong> Keep a small container of raw almonds at your desk for a healthy afternoon snack.</li>
+                                    <li class="mb-3"><strong>Salad Boost:</strong> Sprinkle sliced almonds on your salads for added crunch and nutrition.</li>
+                                    <li class="mb-3"><strong>Baking Substitute:</strong> Use almond flour instead of regular flour in your baking recipes.</li>
+                                    <li><strong>Evening Treat:</strong> Enjoy a glass of almond milk before bed for a calcium-rich, low-calorie beverage.</li>
+                                </ol>
+                                
+                                <!-- Conclusion -->
+                                <div class="mt-10 p-6 bg-gradient-to-r from-amber-50 to-amber-100 rounded-xl border border-amber-300">
+                                    <h3 class="text-xl font-bold text-amber-900 mb-3">Conclusion</h3>
+                                    <p class="text-amber-800">
+                                        Incorporating a handful of almonds into your daily diet is a simple yet powerful step toward better health. Whether you're looking to improve heart health, boost brain function, manage weight, or simply add more nutritious foods to your diet, almonds offer a versatile and delicious solution. Remember, as with any food, moderation is key – about 20-30 almonds (approximately 1 ounce) per day is the recommended serving size.
+                                    </p>
+                                </div>
+                                
+                                <!-- Author Bio -->
+                                <div class="mt-10 pt-6 border-t border-amber-200">
+                                    <div class="flex items-start">
+                                        <div class="w-16 h-16 rounded-full bg-amber-200 flex items-center justify-center mr-4 flex-shrink-0">
+                                            <span class="text-amber-700 font-bold text-xl">JD</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-amber-900 text-lg mb-2">About Dr. Jane Doe</h3>
+                                            <p class="text-amber-700 mb-2">
+                                                Dr. Jane Doe is a certified nutritionist with over 15 years of experience in clinical nutrition and wellness coaching. She specializes in plant-based nutrition and natural remedies. Her work has been published in several health and wellness journals.
+                                            </p>
+                                            <div class="flex space-x-4 mt-4">
+                                                <a href="#" class="text-amber-600 hover:text-amber-700 font-medium text-sm">View All Articles</a>
+                                                <a href="#" class="text-amber-600 hover:text-amber-700 font-medium text-sm">Contact</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            
+                            <!-- Related Products -->
+                            <div class="mb-12">
+                                <h3 class="text-2xl font-bold text-amber-900 mb-6">Related Products</h3>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    <!-- Product 1 -->
+                                    <div class="bg-white rounded-xl shadow-sm border border-amber-200 overflow-hidden card-hover">
+                                        <div class="h-40 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                                            <div class="text-center">
+                                                <div class="text-4xl mb-2">🥜</div>
+                                                <span class="text-amber-700 font-medium">Raw Almonds</span>
+                                            </div>
+                                        </div>
+                                        <div class="p-4">
+                                            <h4 class="font-bold text-amber-900 mb-2">Premium Raw Almonds</h4>
+                                            <p class="text-sm text-amber-700 mb-3">California grown, unsalted, rich in nutrients</p>
+                                            <div class="flex justify-between items-center">
+                                                <span class="font-bold text-amber-800">$12.99/lb</span>
+                                                <button class="bg-amber-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-amber-700 transition-colors">
+                                                    Add to Cart
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Product 2 -->
+                                    <div class="bg-white rounded-xl shadow-sm border border-amber-200 overflow-hidden card-hover">
+                                        <div class="h-40 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                                            <div class="text-center">
+                                                <div class="text-4xl mb-2">🥜</div>
+                                                <span class="text-amber-700 font-medium">Almond Butter</span>
+                                            </div>
+                                        </div>
+                                        <div class="p-4">
+                                            <h4 class="font-bold text-amber-900 mb-2">Organic Almond Butter</h4>
+                                            <p class="text-sm text-amber-700 mb-3">Creamy, no added sugar, high protein</p>
+                                            <div class="flex justify-between items-center">
+                                                <span class="font-bold text-amber-800">$9.99/jar</span>
+                                                <button class="bg-amber-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-amber-700 transition-colors">
+                                                    Add to Cart
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Product 3 -->
+                                    <div class="bg-white rounded-xl shadow-sm border border-amber-200 overflow-hidden card-hover">
+                                        <div class="h-40 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                                            <div class="text-center">
+                                                <div class="text-4xl mb-2">🥜</div>
+                                                <span class="text-amber-700 font-medium">Almond Mix</span>
+                                            </div>
+                                        </div>
+                                        <div class="p-4">
+                                            <h4 class="font-bold text-amber-900 mb-2">Trail Mix with Almonds</h4>
+                                            <p class="text-sm text-amber-700 mb-3">Almonds, raisins, cashews & dark chocolate</p>
+                                            <div class="flex justify-between items-center">
+                                                <span class="font-bold text-amber-800">$14.99/lb</span>
+                                                <button class="bg-amber-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-amber-700 transition-colors">
+                                                    Add to Cart
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sidebar -->
+                    <div class="lg:w-1/3">
+                        <!-- About Blog -->
+                        <div class="bg-white rounded-2xl shadow-sm p-6 border border-amber-200 mb-8">
+                            <h3 class="text-xl font-bold text-amber-900 mb-4">About Our Blog</h3>
+                            <p class="text-amber-700 mb-4">
+                                Welcome to Nature's Basket blog, where we share insights, recipes, and expert advice on natural nutrition, healthy living, and sustainable practices.
+                            </p>
+                            <div class="flex space-x-3">
+                                <a href="#" class="text-amber-300 hover:text-amber-600 transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-amber-300 hover:text-amber-600 transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-amber-300 hover:text-amber-600 transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Categories -->
+                        <div class="bg-white rounded-2xl shadow-sm p-6 border border-amber-200 mb-8">
+                            <h3 class="text-xl font-bold text-amber-900 mb-4">Categories</h3>
+                            <ul class="space-y-3">
+                                <li>
+                                    <a href="#" class="flex justify-between items-center text-amber-700 hover:text-amber-600 transition-colors">
+                                        <span>Nutrition</span>
+                                        <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-1 rounded-full">12</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex justify-between items-center text-amber-700 hover:text-amber-600 transition-colors">
+                                        <span>Recipes</span>
+                                        <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-1 rounded-full">8</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex justify-between items-center text-amber-700 hover:text-amber-600 transition-colors">
+                                        <span>Wellness</span>
+                                        <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-1 rounded-full">6</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex justify-between items-center text-amber-700 hover:text-amber-600 transition-colors">
+                                        <span>Sustainability</span>
+                                        <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-1 rounded-full">4</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex justify-between items-center text-amber-700 hover:text-amber-600 transition-colors">
+                                        <span>Health Tips</span>
+                                        <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-1 rounded-full">9</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex justify-between items-center text-amber-700 hover:text-amber-600 transition-colors">
+                                        <span>DIY</span>
+                                        <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-1 rounded-full">5</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Popular Posts -->
+                        <div class="bg-white rounded-2xl shadow-sm p-6 border border-amber-200 mb-8">
+                            <h3 class="text-xl font-bold text-amber-900 mb-4">Popular Posts</h3>
+                            <div class="space-y-4">
+                                <a href="#" class="flex items-start space-x-3 hover:bg-amber-50 p-2 rounded-lg transition-colors">
+                                    <div class="w-16 h-16 flex-shrink-0 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg flex items-center justify-center">
+                                        <span class="text-amber-700 text-xs">Image</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-amber-900 text-sm line-clamp-2">
+                                            Top 10 Dry Fruits for Boosting Immunity
+                                        </h4>
+                                        <span class="text-xs text-amber-600">May 2, 2024</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-start space-x-3 hover:bg-amber-50 p-2 rounded-lg transition-colors">
+                                    <div class="w-16 h-16 flex-shrink-0 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg flex items-center justify-center">
+                                        <span class="text-amber-700 text-xs">Image</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-amber-900 text-sm line-clamp-2">
+                                            Honey for Allergies: Fact or Fiction?
+                                        </h4>
+                                        <span class="text-xs text-amber-600">Apr 25, 2024</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-start space-x-3 hover:bg-amber-50 p-2 rounded-lg transition-colors">
+                                    <div class="w-16 h-16 flex-shrink-0 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg flex items-center justify-center">
+                                        <span class="text-amber-700 text-xs">Image</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-amber-900 text-sm line-clamp-2">
+                                            The Ultimate Trail Mix Recipe Guide
+                                        </h4>
+                                        <span class="text-xs text-amber-600">Apr 18, 2024</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-start space-x-3 hover:bg-amber-50 p-2 rounded-lg transition-colors">
+                                    <div class="w-16 h-16 flex-shrink-0 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg flex items-center justify-center">
+                                        <span class="text-amber-700 text-xs">Image</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-amber-900 text-sm line-clamp-2">
+                                            5 Delicious Honey Breakfast Recipes
+                                        </h4>
+                                        <span class="text-xs text-amber-600">Apr 28, 2024</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Newsletter Signup -->
+                        <div class="bg-amber-600 rounded-2xl shadow-sm p-6">
+                            <h3 class="text-xl font-bold text-white mb-3">Stay Updated</h3>
+                            <p class="text-amber-100 mb-4 text-sm">
+                                Get the latest articles, recipes, and health tips delivered to your inbox.
+                            </p>
+                            <div class="space-y-3">
+                                <input 
+                                    type="email" 
+                                    placeholder="Your email address" 
+                                    class="w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-300 text-sm"
+                                >
+                                <button class="w-full bg-white text-amber-600 py-3 rounded-xl font-semibold hover:bg-amber-50 transition-colors text-sm">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-amber-100 pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+                <!-- Brand Column -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <div class="w-8 h-8 rounded-full bg-amber-500 mr-2"></div>
+                        <div class="text-2xl font-bold text-amber-50">Nature's Basket</div>
+                    </div>
+                    <p class="text-amber-300 mb-6 leading-relaxed">
+                        Bringing you nature's finest dry fruits and pure honey, sourced sustainably and delivered with care.
+                    </p>
+                    <div class="flex space-x-4">
+                        <!-- Social Media Icons -->
+                        <a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Shop Column -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-amber-50">Shop</h4>
+                    <ul class="space-y-3">
+                        <li><a href="../index.html" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Home</a></li>
+                        <li><a href="dry-fruits.html" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Dry Fruits</a></li>
+                        <li><a href="honey.html" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Honey</a></li>
+                        <li><a href="blog.html" class="text-amber-50">Blog</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Seasonal Specials</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support Column -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-amber-50">Support</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Contact Us</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Shipping Info</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Returns & Exchanges</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">FAQ</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Storage Tips</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Column -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-amber-50">About Us</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Our Story</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Sustainability</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Privacy Policy</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Terms of Service</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-amber-50 transition-colors duration-200">Contact Information</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t border-amber-800 text-center">
+                <p class="text-amber-400">
+                    &copy; 2024 Nature's Basket. All rights reserved. | Naturally Good, Naturally Yours
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
