@@ -1,7 +1,7 @@
 // scripts/app.js – Final version
 
 // ==================== Configuration ====================
-const API_BASE = 'http://localhost:4000/api'; // Change to your actual backend port
+const API_BASE = 'https://shopsms-backend.onrender.com/api'; // Change to your actual backend port
 let token = localStorage.getItem('token');
 let currentUser = null;
 let allProducts = [];
